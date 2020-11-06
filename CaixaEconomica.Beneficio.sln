@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Dominio", "0 - Dominio", "{83B73E17-4AAA-4C2B-9502-718B441A85E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Testes", "1 - Testes", "{9BDB02D9-18BC-440B-82C3-CBA0609C6C41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{509C4EB1-95E5-4E8F-A10E-F3A6EC90CDCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - API", "3 - API", "{E57EC262-1E43-4324-8A78-71D905127415}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Beneficio.Dominio", "CaixaEconomica.Beneficio.Dominio\CaixaEconomica.Beneficio.Dominio.csproj", "{69E19F31-89BD-48FA-8AF4-9BAA2D07A12C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Beneficio.Testes", "CaixaEconomica.Beneficio.Testes\CaixaEconomica.Beneficio.Testes.csproj", "{17423A4A-B0AF-44B5-9794-3ABC5A0F3C0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - Dados", "2.1 - Dados", "{BE18779C-917E-4FD4-989B-B64D910EC76E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2 - CrossCutting", "2.2 - CrossCutting", "{17F69A81-44CF-4728-8D0D-1CF13191BEC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Beneficio.Infra.Dados", "CaixaEconomica.Beneficio.Infra.Dados\CaixaEconomica.Beneficio.Infra.Dados.csproj", "{2FD3DC17-E2F3-41E6-81A4-CCD2DB8ECCF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Beneficio.Infra.CrossCutting.Ioc", "CaixaEconomica.Beneficio.Infra.CrossCutting.Ioc\CaixaEconomica.Beneficio.Infra.CrossCutting.Ioc.csproj", "{7360A8E1-9DEC-465B-883D-6479B6EFCD80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEconomica.Beneficio.API", "CaixaEconomica.Beneficio.API\CaixaEconomica.Beneficio.API.csproj", "{243F4050-B713-4536-BECE-839DAFC12FC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69E19F31-89BD-48FA-8AF4-9BAA2D07A12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E19F31-89BD-48FA-8AF4-9BAA2D07A12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E19F31-89BD-48FA-8AF4-9BAA2D07A12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E19F31-89BD-48FA-8AF4-9BAA2D07A12C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17423A4A-B0AF-44B5-9794-3ABC5A0F3C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17423A4A-B0AF-44B5-9794-3ABC5A0F3C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17423A4A-B0AF-44B5-9794-3ABC5A0F3C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17423A4A-B0AF-44B5-9794-3ABC5A0F3C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD3DC17-E2F3-41E6-81A4-CCD2DB8ECCF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD3DC17-E2F3-41E6-81A4-CCD2DB8ECCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD3DC17-E2F3-41E6-81A4-CCD2DB8ECCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD3DC17-E2F3-41E6-81A4-CCD2DB8ECCF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7360A8E1-9DEC-465B-883D-6479B6EFCD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7360A8E1-9DEC-465B-883D-6479B6EFCD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7360A8E1-9DEC-465B-883D-6479B6EFCD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7360A8E1-9DEC-465B-883D-6479B6EFCD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243F4050-B713-4536-BECE-839DAFC12FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243F4050-B713-4536-BECE-839DAFC12FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243F4050-B713-4536-BECE-839DAFC12FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243F4050-B713-4536-BECE-839DAFC12FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{69E19F31-89BD-48FA-8AF4-9BAA2D07A12C} = {83B73E17-4AAA-4C2B-9502-718B441A85E6}
+		{17423A4A-B0AF-44B5-9794-3ABC5A0F3C0E} = {9BDB02D9-18BC-440B-82C3-CBA0609C6C41}
+		{BE18779C-917E-4FD4-989B-B64D910EC76E} = {509C4EB1-95E5-4E8F-A10E-F3A6EC90CDCE}
+		{17F69A81-44CF-4728-8D0D-1CF13191BEC3} = {509C4EB1-95E5-4E8F-A10E-F3A6EC90CDCE}
+		{2FD3DC17-E2F3-41E6-81A4-CCD2DB8ECCF6} = {BE18779C-917E-4FD4-989B-B64D910EC76E}
+		{7360A8E1-9DEC-465B-883D-6479B6EFCD80} = {17F69A81-44CF-4728-8D0D-1CF13191BEC3}
+		{243F4050-B713-4536-BECE-839DAFC12FC1} = {E57EC262-1E43-4324-8A78-71D905127415}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51054313-41CA-45B2-87CB-E1AB5DA176B0}
+	EndGlobalSection
+EndGlobal
