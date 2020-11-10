@@ -27,9 +27,12 @@ namespace CaixaEconomica.Beneficio.Dominio.Entidades
             return Id.GetHashCode();
         }
 
-        public bool Valido()
+        internal void Validar()
         {
-            return (Rua != null && Numero != null && TipoEnderecoId != null && PessoaId != null);
+            if (Rua == null || Numero == 0 && TipoEnderecoId == 0 && PessoaId == 0)
+            {
+                NotificacaoDominio.AddErro("existem campos nulos do endereço informado. favor revise-os!");
+            }
         }
     }
 }

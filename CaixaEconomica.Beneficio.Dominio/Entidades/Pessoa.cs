@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CaixaEconomica.Beneficio.Dominio.Interfaces.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,7 +13,6 @@ namespace CaixaEconomica.Beneficio.Dominio.Entidades
         public string Nome { get; set; }
         public string SobreNome { get; set; }
         public string CPF { get; set; }
-
         public DateTime DataNascimento { get; set; }
         /*
          * 02 Empregado
@@ -23,6 +23,12 @@ namespace CaixaEconomica.Beneficio.Dominio.Entidades
         private readonly HashSet<BeneficioPessoa> _beneficioPessoas = new HashSet<BeneficioPessoa>();
         public IEnumerable<BeneficioPessoa> beneficiosPessoas => _beneficioPessoas.ToList().AsReadOnly();
 
+        public Pessoa()
+        {
+            //  Enderecos = new List<Endereco>();
+            SetNotificacao(new NotificacaoDominio());
+        }
+
         //Relacionamento de 1(Pessoa) para Muitos(Endereço)
         // Backing Field - n acessar a lista Enderecos diretamente
         // tem uma boa peformance; evita ter elementos duplicados
@@ -30,12 +36,29 @@ namespace CaixaEconomica.Beneficio.Dominio.Entidades
         private readonly HashSet<Endereco> _enderecos = new HashSet<Endereco>();
         public IEnumerable<Endereco> Enderecos => _enderecos.ToList().AsReadOnly(); //esses itens n poderão ser alterados de fora da classe
 
-
-
         public void AdicionarEndereco(Endereco endereco)
         {
-            if (endereco != null)
-                _enderecos.Add(endereco);
+            if (endereco == null)
+            {
+                NotificacaoDominio.AddErro("Erro: endereço deve ser instanciado");
+            }
+            else
+            {
+                //vai ficar assim enquanto o projeto n tiver a injeção de dependência 
+                endereco.SetNotificacao(new NotificacaoDominio());
+
+                //n é para tratar os erros de endereço (singular) em Pessoa. é de interesse de Pessoa somente os endereços (plural)
+                endereco.Validar();
+                if(endereco.Valido())
+                {
+                    _enderecos.Add(endereco);
+                }else
+                {
+                    NotificacaoDominio.AddErro("Erro: Endereço não é válido");
+                }
+           
+
+            }
         }
 
         public bool Equals(Pessoa other)
@@ -50,11 +73,6 @@ namespace CaixaEconomica.Beneficio.Dominio.Entidades
 
         //public virtual ICollection<Endereco> Enderecos { get; set; }
 
-        public Pessoa()
-        {
-          //  Enderecos = new List<Endereco>();
-
-        }
 
 
     }

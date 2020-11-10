@@ -32,7 +32,12 @@ namespace CaixaEconomica.Beneficio.Dominio.Interfaces.Repositories
 
         public bool Validado()
         {
-            return !_erroMensagem.Any();
+            if(_erroMensagem.Any())
+            {
+                throw new ArgumentException(string.Join(". ", _erroMensagem.ToArray()));
+            }else
+            { return true;
+            }
         }
     }
 }
